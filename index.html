@@ -71,6 +71,14 @@ nav{display:flex;align-items:center;justify-content:space-between;height:62px}
 .tag{font-size:.8rem;padding:3px 10px;border-radius:6px;background:var(--soft);color:var(--accent);font-weight:500}
 .card .actions{display:flex;gap:14px;font-weight:700;color:var(--accent);font-size:.92rem}
 .card .actions a:hover{text-decoration:underline}
+.card .actions a.gh{display:inline-block;padding:7px 14px;border-radius:8px;border:1.5px solid var(--accent);color:var(--accent);font-size:.9rem}
+.card .actions a.gh:hover{text-decoration:none;background:var(--accent);color:var(--accent-ink)}
+.proj{position:relative;transition:border-color .2s,transform .2s}
+.proj:hover{border-color:var(--accent);transform:translateY(-3px)}
+.proj a.gh::after{content:"";position:absolute;inset:0;border-radius:16px}
+.src{color:var(--muted);font-size:.8rem}
+.cert{border-top:4px solid var(--accent)}
+.issuer{font-weight:700;color:var(--ink)!important}
 .role{font-size:.88rem;color:var(--accent);font-weight:700}
 .club{border-left:5px solid var(--accent)}
 /* timeline */
@@ -111,8 +119,6 @@ footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid 
     <p class="lead">I'm a CSE student at East West University. I enjoy learning programming, building small projects and improving my skills step by step.</p>
     <div class="btns">
       <a class="btn primary" href="#contact">Get in Touch</a>
-      <a class="btn ghost" href="#projects">View Projects</a>
-      <a class="btn ghost" href="Karan-Chakma-CV.pdf" download>Download CV</a>
     </div>
   </div>
   <!-- Photo: replace the KC text with <img src="photo.jpg" alt="Karan Chakma"> -->
@@ -122,7 +128,7 @@ footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid 
 <div class="wrap"><div class="stats">
   <div class="stat"><b>1</b><span>Project built</span></div>
   <div class="stat"><b>3</b><span>Clubs joined</span></div>
-  <div class="stat"><b>1</b><span>Certificate</span></div>
+  <div class="stat"><b>2</b><span>Certificates</span></div>
   <div class="stat"><b>2nd</b><span>Semester at EWU</span></div>
 </div></div>
 
@@ -148,10 +154,12 @@ footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid 
 <section id="projects"><div class="wrap">
   <h2>Some things I've built</h2>
   <div class="grid">
-    <article class="card" style="max-width:520px">
+    <article class="card proj" style="max-width:520px">
       <h3>Student Result Management System (SRMS)</h3>
       <p>A group project for managing student result information through a simple program.</p>
-      <div class="actions"><a href="https://github.com/karanchakma931-crypto/Karanchakma" target="_blank" rel="noopener">View project →</a></div>
+      <div class="actions"><a class="gh" href="https://github.com/karanchakma931-crypto/Karanchakma/blob/main/Students%20result%20management%20system.c" target="_blank" rel="noopener noreferrer" title="Open the project">
+        View Project →</a></div>
+      <small class="src">github.com/karanchakma931-crypto/Karanchakma</small>
       <div class="tags"><span class="tag">Team</span><span class="tag">C Programming</span></div>
     </article>
   </div>
@@ -190,12 +198,23 @@ footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid 
 </div></section>
 
 <section id="certificates"><div class="wrap">
-  <h2>Certificate &amp; achievement</h2>
-  <article class="card">
-    <h3>"We Stand Against Cyberbullying"</h3>
-    <span class="role">Certificate of Attendance</span>
-    <p>Organized by Next Generation AI Research Centre (NGAIRC), supported by IEEE Computational Intelligence Society (Bangladesh Chapter) and East West University Computer Programming Club (EWUCoPC).</p>
-  </article>
+  <h2>Certificates &amp; achievements</h2>
+  <div class="grid">
+    <article class="card cert">
+      <span class="role">Course Completion · 2026</span>
+      <h3>Emergency Preparedness and Response</h3>
+      <p class="issuer">UNICEF</p>
+      <p>Completed a professional learning course on emergency preparedness and response.</p>
+    </article>
+    <article class="card cert">
+      <span class="role">Certificate of Attendance</span>
+      <h3>"We Stand Against Cyberbullying"</h3>
+      <p class="issuer">NGAIRC · IEEE CIS Bangladesh Chapter · EWUCoPC</p>
+      <p>Organized by Next Generation AI Research Centre (NGAIRC), supported by IEEE Computational Intelligence Society (Bangladesh Chapter) and East West University Computer Programming Club (EWUCoPC).</p>
+    </article>
+    <!-- TO ADD A NEW CERTIFICATE: copy one <article> block above, paste it here, and change the text.
+         Optional link: add <div class="actions"><a href="LINK" target="_blank" rel="noopener noreferrer">View certificate →</a></div> after the last <p>. -->
+  </div>
 </div></section>
 
 <section id="contact"><div class="wrap">
