@@ -3,169 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Karan Chakma — CSE student and aspiring software engineer. Portfolio, projects, skills, education and certification.">
   <title>Karan Chakma | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <a class="logo" href="#home">Karan<span>.</span></a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-    <nav id="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header class="navbar">
+  <a class="logo" href="#home">Karan <span>Chakma</span></a>
+  <button class="menu" id="menuBtn">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+    <a href="#projects">Projects</a><a href="#education">Education</a>
+    <a href="#certificates">Certificates</a><a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <main>
-    <!-- ================= HERO / HOME =================
-         Easy to edit: change the text inside the tags below.
-         Keep the class names unchanged if you only want to change words. -->
-    <section class="hero" id="home">
-      <div class="hero-content reveal">
-        <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
-        <h1>Hi, I'm <span>Karan Chakma</span>.</h1>
-        <p class="hero-role">CSE Student &amp; Aspiring Software Engineer</p>
-        <p class="hero-text">I’m still at the beginning of my journey in tech. I enjoy learning by building small projects, trying new things and improving a little every day.</p>
-        <div class="hero-buttons">
-          <a class="btn primary" href="#projects">Explore My Work</a>
-          <a class="btn secondary" href="#contact">Let's Connect</a>
-        </div>
-        <div class="socials" aria-label="Social links">
-          <a href="https://www.facebook.com/share/1Hn7JzmnPX/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-          <a href="https://github.com/karanchakma931-crypto" target="_blank" rel="noopener" aria-label="GitHub">⌘</a>
-          <a href="https://www.linkedin.com/in/karan-chakma-04ba553a7" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-        </div>
-      </div>
+<main>
+<section id="home" class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+    <h1>Hi, I'm <span>Karan Chakma</span></h1>
+    <h2>CSE Student &amp; Aspiring Software Engineer</h2>
+    <p class="lead">I'm a CSE student at East West University. I enjoy learning programming, building small projects and improving my skills step by step.</p>
+    <a class="btn" href="#contact">Get in Touch</a>
+  </div>
+  <div class="techs">
+    <div class="tech"><b>HTML</b><small>HTML5</small></div>
+    <div class="tech"><b>CSS</b><small>CSS3</small></div>
+    <div class="tech"><b>JS</b><small>JavaScript</small></div>
+    <div class="tech"><b>C</b><small>C Programming</small></div>
+  </div>
+</section>
 
-      <div class="hero-tech reveal" aria-label="Technologies I use">
-        <div class="hero-tech-item"><span class="tech-logo html-logo">HTML</span><span>HTML</span></div>
-        <div class="hero-tech-item"><span class="tech-logo css-logo">CSS</span><span>CSS</span></div>
-        <div class="hero-tech-item"><span class="tech-logo js-logo">JS</span><span>JavaScript</span></div>
-        <div class="hero-tech-item"><span class="tech-logo c-logo">C</span><span>C Programming</span></div>
-      </div>
-    </section>
+<section id="about" class="section">
+  <p class="eyebrow">ABOUT ME</p>
+  <h2>A little about me</h2>
+  <div class="about-grid">
+    <p>I'm Karan Chakma, a Computer Science and Engineering student at East West University. I'm interested in technology, problem solving and creating useful things through code. I like working on small projects and learning new things along the way.</p>
+    <div class="info"><p><b>Location</b><br>Dhaka, Bangladesh</p><p><b>Phone</b><br>+880 1846-991212</p><p><b>Email</b><br><a href="mailto:Karanchakma931@gmail.com">Karanchakma931@gmail.com</a></p></div>
+  </div>
+</section>
 
-    <!-- ================= ABOUT ================= -->
-    <section id="about" class="section">
-      <div class="section-heading reveal"><p>01 / ABOUT</p><h2>Professional Summary</h2></div>
-      <div class="about-grid">
-        <div class="glass reveal">
-          <p>I’m <strong>Karan Chakma</strong>, a CSE student at East West University. I’m learning programming step by step and enjoying the process of turning simple ideas into working projects.</p>
-          <p>Besides coding, I enjoy photo editing, video editing and visual storytelling. I like working with people, learning from mistakes and taking on new challenges as I grow.</p>
-        </div>
-        <div class="facts reveal">
-          <div><span>University</span><strong>East West University (EWU)</strong></div>
-          <div><span>Program</span><strong>B.Sc. in Computer Science & Engineering</strong></div>
-          <div><span>HSC</span><strong>Ideal College, Dhanmondi</strong></div>
-          <div><span>Focus</span><strong>Technology, AI & Cybersecurity</strong></div>
-        </div>
-      </div>
-    </section>
+<section id="skills" class="section alt">
+  <p class="eyebrow">SKILLS</p>
+  <h2>Skills</h2>
+  <div class="cards skills">
+    <div>C Programming</div><div>HTML &amp; CSS</div><div>JavaScript</div>
+    <div>Problem Solving</div><div>Team Management</div><div>Time Management</div><div>Volunteering</div>
+  </div>
+</section>
 
-    <!-- ================= SKILLS ================= -->
-    <section id="skills" class="section alt">
-      <div class="section-heading reveal"><p>02 / EXPERTISE</p><h2>What I’m Learning</h2></div>
-      <div class="skill-groups">
-        <div class="skill-group reveal">
-          <h3>Programming & Web</h3>
-          <div class="skill-list"><span>C Programming</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Problem Solving</span></div>
-        </div>
-        <div class="skill-group reveal">
-          <h3>Creative & Multimedia</h3>
-          <div class="skill-list"><span>Photo Editing & Touch-up</span><span>Video Editing & Post-Production</span><span>Photography & Visual Composition</span><span>Color Grading</span></div>
-        </div>
-        <div class="skill-group reveal">
-          <h3>Professional Skills</h3>
-          <div class="skill-list"><span>Teamwork & Collaboration</span><span>Communication Skills</span><span>Adaptability & Quick Learning</span><span>Time Management</span><span>Critical Thinking</span></div>
-        </div>
-      </div>
-    </section>
+<section id="projects" class="section">
+  <p class="eyebrow">PROJECTS</p>
+  <h2>Some Things I've Built</h2>
+  <div class="project-grid">
+    <article class="project"><span class="number">01</span><h3>Jump Game</h3><p>A small game project built as a solo project to practice programming and logic.</p><span class="tag">C Programming</span></article>
+    <article class="project"><span class="number">02</span><h3>Student Result Management System</h3><p>A group project focused on managing student result information through a simple programming system.</p><span class="tag">C Programming</span></article>
+  </div>
+</section>
 
-    <!-- ================= PROJECTS =================
-         To add a project: copy one <article class="project"> ... </article> block
-         and change its number, type, title, description and tags. -->
-    <section id="projects" class="section">
-      <div class="section-heading reveal"><p>03 / PROJECTS</p><h2>Selected Work</h2></div>
-      <div class="project-grid">
-        <article class="project reveal">
-          <div class="project-top"><span>01</span><span>Solo Project</span></div>
-          <h3>Jump Game</h3>
-          <p>A small project I built on my own while learning programming. It helped me practice logic, conditions and problem-solving.</p>
-          <div class="tags"><span>C</span><span>Game Logic</span><span>Problem Solving</span></div>
-        </article>
-        <article class="project reveal">
-          <div class="project-top"><span>02</span><span>Group Project</span></div>
-          <h3>Student Result Management System</h3>
-          <p>A group project where we worked together to manage student result information. It gave me practical experience with programming and teamwork.</p>
-          <div class="tags"><span>C</span><span>Management System</span><span>Teamwork</span></div>
-        </article>
-      </div>
-    </section>
+<section id="education" class="section alt">
+  <p class="eyebrow">EDUCATION</p>
+  <h2>My Academic Journey</h2>
+  <div class="timeline">
+    <div><h3>BSc in Computer Science &amp; Engineering</h3><p>East West University (EWU) · 2nd Semester</p></div>
+    <div><h3>Higher Secondary Certificate (HSC)</h3><p>Ideal College, Dhanmondi</p></div>
+  </div>
+</section>
 
-    <!-- ================= EDUCATION ================= -->
-    <section id="education" class="section alt">
-      <div class="section-heading reveal"><p>04 / EDUCATION</p><h2>Academic Background</h2></div>
-      <div class="timeline">
-        <div class="timeline-item reveal"><span>NOW</span><div><h3>Bachelor of Science in Computer Science and Engineering (CSE)</h3><p>East West University (EWU)</p><small>Undergraduate Program</small></div></div>
-        <div class="timeline-item reveal"><span>2025</span><div><h3>Higher Secondary Certificate (HSC)</h3><p>Ideal College, Dhanmondi</p><small>Group: Science</small></div></div>
-      </div>
-    </section>
+<section id="certificates" class="section">
+  <p class="eyebrow">CERTIFICATE</p>
+  <h2>Certificate &amp; Achievement</h2>
+  <article class="certificate">
+    <div class="certificate-icon" aria-hidden="true">▤</div>
+    <h3>“We Stand Against Cyberbullying”</h3>
+    <p>Certificate of Attendance</p>
+    <p>Organized by Next Generation AI Research Centre (NGAIRC), supported by IEEE Computational Intelligence Society (Bangladesh Chapter) and East West University Computer Programming Club (EWUCoPC).</p>
+  </article>
+</section>
 
-    <!-- ================= CERTIFICATIONS ================= -->
-    <section id="certifications" class="section">
-      <div class="section-heading reveal"><p>05 / CERTIFICATION & TRAINING</p><h2>Learning & Recognition</h2></div>
-      <div class="certificate-card reveal">
-        <div class="certificate-icon">✦</div>
-        <div>
-          <span class="certificate-label">CERTIFICATE OF ATTENDANCE</span>
-          <h3>We Stand Against Cyberbullying</h3>
-          <p>Organized by <strong>Next Generation AI Research Centre (NGAIRC)</strong>.</p>
-          <p>Supported by <strong>IEEE Computational Intelligence Society (Bangladesh Chapter)</strong> and <strong>East West University Computer Programming Club (EWUCoPC)</strong>.</p>
-          <div class="takeaway"><b>Key Takeaways</b><span>Awareness on digital safety, cyberbullying prevention, and ethical online behavior.</span></div>
-        </div>
-      </div>
-      <p class="section-note">More certifications, awards and achievements can be added here anytime.</p>
-    </section>
+<section id="contact" class="section alt">
+  <p class="eyebrow">CONTACT</p>
+  <h2>Let's Connect</h2>
+  <p class="contact-intro">Feel free to reach out if you want to collaborate, have a project idea, or just say hi.</p>
+  <div class="contact-links">
+    <a href="mailto:Karanchakma931@gmail.com">Email</a>
+    <a href="tel:+8801846991212">Phone</a>
+    <a href="https://github.com/karanchakma931-crypto" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/karan-chakma-04ba553a7/" target="_blank">LinkedIn</a>
+    <a href="https://www.facebook.com/share/1Hn7JzmnPX/?mibextid=wwXIfr" target="_blank">Facebook</a>
+  </div>
+</section>
+</main>
 
-    <!-- ================= ADDITIONAL INFO ================= -->
-    <section id="additional" class="section alt">
-      <div class="section-heading reveal"><p>06 / ADDITIONAL</p><h2>A Little More About Me</h2></div>
-      <div class="additional-grid">
-        <div class="additional-card reveal"><h3>Languages</h3><div class="language"><span>Chakma</span></div><div class="language"><span>Bangla</span></div><div class="language"><span>English</span></div></div>
-        <div class="additional-card reveal"><h3>Interests</h3><p>Technology, AI, cybersecurity, digital media, visual storytelling and learning new technologies.</p></div>
-        <div class="additional-card reveal"><h3>Professional Approach</h3><p>I’m curious, open to learning and comfortable starting from the basics. I try to improve through practice, feedback and real projects.</p></div>
-      </div>
-    </section>
-
-    <!-- ================= CONTACT =================
-         Change email, phone, location and social links here. -->
-    <section id="contact" class="section contact">
-      <div class="section-heading reveal"><p>07 / CONTACT</p><h2>Let's Connect</h2></div>
-      <div class="contact-card reveal">
-        <p>If you’d like to talk about a project, technology, or simply connect, feel free to reach out.</p>
-        <a class="email" href="mailto:Karanchakma931@gmail.com">Karanchakma931@gmail.com</a>
-        <div class="contact-details">
-          <span>Dhaka, Bangladesh</span>
-          <span>+880 1846-991212</span>
-        </div>
-        <div class="socials large">
-          <a href="https://www.facebook.com/share/1Hn7JzmnPX/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-          <a href="https://github.com/karanchakma931-crypto" target="_blank" rel="noopener" aria-label="GitHub">⌘</a>
-          <a href="https://www.linkedin.com/in/karan-chakma-04ba553a7" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© <span id="year"></span> Karan Chakma. Built with curiosity & purpose.</p>
-  </footer>
-  <script src="script.js"></script>
+<footer>© 2026 Karan Chakma · Personal Portfolio</footer>
+<script src="script.js"></script>
 </body>
 </html>
