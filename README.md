@@ -1,3 +1,5 @@
-Karan Chakma Portfolio
+# Karan Chakma | Portfolio
 
-The hero section intentionally contains no HTML/CSS/C technology cards. Those appear only in the Skills section.
+Personal portfolio website (HTML/CSS/JS, English + বাংলা).
+
+Live: https://karanchakma931-crypto.github.io/<repo-name>/
