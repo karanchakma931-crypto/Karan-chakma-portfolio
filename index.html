@@ -8,141 +8,125 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <a class="brand" href="#home">Karan Chakma</a>
-    <button class="menu-btn" aria-label="Open menu">☰</button>
+  <header class="header">
+    <a class="logo" href="#home">Karan<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
     <nav id="nav">
+      <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
       <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <div class="hero-inner">
+    <section class="hero" id="home">
+      <div class="hero-content reveal">
         <p class="eyebrow">CSE STUDENT • EAST WEST UNIVERSITY</p>
-        <h1>Karan Chakma</h1>
-        <p class="hero-text">Computer Science & Engineering student passionate about programming, teamwork, volunteering and building practical projects.</p>
-        <div class="buttons">
-          <a class="btn primary" href="#projects">View Projects</a>
+        <h1>Hi, I'm <span>Karan Chakma</span>.</h1>
+        <p class="hero-text">A Computer Science & Engineering student who enjoys building projects, learning technology, volunteering, and working with teams.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#projects">View My Projects</a>
           <a class="btn secondary" href="#contact">Contact Me</a>
         </div>
-        <div class="socials hero-socials" aria-label="Social links">
-          <a href="https://www.facebook.com/share/1Hn7JzmnPX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v4h4v-4h3.2l.8-4H13V9c0-.67.33-1 1-1Z"/></svg>
-          </a>
-          <a href="https://github.com/karanchakma931-crypto" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7A11.3 11.3 0 0 0 8.43 22.9c.57.1.78-.25.78-.55v-2.1c-3.17.69-3.84-1.34-3.84-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.52-2.53-.29-5.2-1.27-5.2-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.13 1.17a10.9 10.9 0 0 1 5.7 0c2.17-1.48 3.13-1.17 3.13-1.17.62 1.58.23 2.74.11 3.03.73.8 1.18 1.82 1.18 3.07 0 4.39-2.68 5.36-5.22 5.64.41.36.78 1.08.78 2.18v3.23c0 .3.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/karan-chakma-04ba553a7?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 3.4A2.2 2.2 0 1 1 5.2 7.8a2.2 2.2 0 0 1 0-4.4ZM3.4 9h3.6v11.6H3.4V9Zm5.8 0h3.45v1.58h.05c.48-.91 1.65-1.87 3.4-1.87 3.64 0 4.31 2.4 4.31 5.52v6.37h-3.6v-5.65c0-1.35-.02-3.08-1.88-3.08-1.88 0-2.17 1.47-2.17 2.98v5.75H9.2V9Z"/></svg>
-          </a>
+        <div class="socials" aria-label="Social links">
+          <a href="https://www.facebook.com/share/1Hn7JzmnPX/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://github.com/karanchakma931-crypto" target="_blank" rel="noopener" aria-label="GitHub">⌘</a>
+          <a href="https://www.linkedin.com/in/karan-chakma-04ba553a7" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <div class="orbit"></div>
+        <div class="code-card">
+          <span>&lt;developer&gt;</span>
+          <strong>Karan Chakma</strong>
+          <small>CSE • Semester 2</small>
+          <span>&lt;/developer&gt;</span>
         </div>
       </div>
     </section>
 
     <section id="about" class="section">
-      <div class="section-heading">
-        <span>01</span><h2>About Me</h2>
+      <div class="section-heading reveal"><p>01 / ABOUT</p><h2>About Me</h2></div>
+      <div class="about-grid">
+        <div class="glass reveal">
+          <p>I am <strong>Karan Chakma</strong>, currently studying Computer Science & Engineering at East West University. I am in my 2nd semester and building my foundation in programming, web development, teamwork, and problem solving.</p>
+          <p>I like learning by creating practical projects and taking part in volunteering and team activities.</p>
+        </div>
+        <div class="facts reveal">
+          <div><span>University</span><strong>East West University</strong></div>
+          <div><span>Department</span><strong>CSE</strong></div>
+          <div><span>Semester</span><strong>2nd Semester</strong></div>
+          <div><span>HSC</span><strong>Ideal College, Dhanmondi</strong></div>
+        </div>
       </div>
-      <div class="card about-card">
-        <p>I am <strong>Karan Chakma</strong>, a Computer Science & Engineering student at East West University. I am currently in my second semester and interested in programming, web technologies, teamwork and volunteering.</p>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="section-heading reveal"><p>02 / SKILLS</p><h2>What I Can Do</h2></div>
+      <div class="skill-grid">
+        <div class="skill reveal"><b>C</b><span>C Programming</span></div>
+        <div class="skill reveal"><b>01</b><span>HTML & CSS</span></div>
+        <div class="skill reveal"><b>TM</b><span>Team Management</span></div>
+        <div class="skill reveal"><b>V</b><span>Volunteering</span></div>
+        <div class="skill reveal"><b>⏱</b><span>Time Management</span></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading reveal"><p>03 / PROJECTS</p><h2>Things I've Built</h2></div>
+      <div class="project-grid">
+        <article class="project reveal">
+          <div class="project-top"><span>01</span><span>Solo Project</span></div>
+          <h3>Jump Game</h3>
+          <p>A solo project created as part of my programming practice and learning journey.</p>
+          <div class="tags"><span>C</span><span>Game</span></div>
+        </article>
+        <article class="project reveal">
+          <div class="project-top"><span>02</span><span>Group Project</span></div>
+          <h3>Student Result Management System</h3>
+          <p>A group project focused on organizing and managing student result information.</p>
+          <div class="tags"><span>C</span><span>Management System</span><span>Teamwork</span></div>
+        </article>
       </div>
     </section>
 
     <section id="education" class="section alt">
-      <div class="section-heading">
-        <span>02</span><h2>Education</h2>
-      </div>
+      <div class="section-heading reveal"><p>04 / EDUCATION</p><h2>My Education</h2></div>
       <div class="timeline">
-        <article class="card timeline-item">
-          <div class="dot"></div>
-          <p class="tag">CURRENT</p>
-          <h3>East West University</h3>
-          <p>Department of Computer Science & Engineering (CSE)</p>
-          <p class="muted">2nd Semester</p>
-        </article>
-        <article class="card timeline-item">
-          <div class="dot"></div>
-          <p class="tag">HIGHER SECONDARY EDUCATION</p>
-          <h3>Ideal College, Dhanmondi</h3>
-          <p>Higher Secondary Certificate (HSC)</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <div class="section-heading">
-        <span>03</span><h2>Skills</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill">C Programming</div>
-        <div class="skill">HTML &amp; CSS</div>
-        <div class="skill">Team Management</div>
-        <div class="skill">Volunteering</div>
-        <div class="skill">Time Management</div>
-      </div>
-    </section>
-
-    <section id="projects" class="section alt">
-      <div class="section-heading">
-        <span>04</span><h2>Projects</h2>
-      </div>
-      <div class="project-grid">
-        <article class="card project">
-          <div class="project-number">01</div>
-          <h3>Jump Game</h3>
-          <p>A solo project created as part of my programming/project practice.</p>
-          <span class="pill">Solo Project</span>
-        </article>
-        <article class="card project">
-          <div class="project-number">02</div>
-          <h3>Student Result Management System</h3>
-          <p>A group project focused on managing and organizing student result information.</p>
-          <span class="pill">Group Project</span>
-        </article>
+        <div class="timeline-item reveal"><span>Current</span><div><h3>East West University</h3><p>B.Sc. in Computer Science & Engineering (CSE)</p><small>2nd Semester</small></div></div>
+        <div class="timeline-item reveal"><span>HSC</span><div><h3>Ideal College, Dhanmondi</h3><p>Higher Secondary Education</p></div></div>
       </div>
     </section>
 
     <section id="achievements" class="section">
-      <div class="section-heading">
-        <span>05</span><h2>Achievements</h2>
-      </div>
-      <div class="card empty-achievement">
-        <p>Achievements will be added here.</p>
-        <small>This section is intentionally ready for future updates.</small>
+      <div class="section-heading reveal"><p>05 / ACHIEVEMENTS</p><h2>Achievements</h2></div>
+      <div class="empty-card reveal">
+        <div class="trophy">★</div>
+        <h3>More coming soon</h3>
+        <p>This section is ready. Add your achievements, certificates, competitions, awards, or activities whenever you want.</p>
       </div>
     </section>
 
-    <section id="contact" class="section contact-section">
-      <div class="section-heading">
-        <span>06</span><h2>Contact</h2>
-      </div>
-      <div class="contact-card">
-        <p class="contact-label">EMAIL</p>
+    <section id="contact" class="section contact">
+      <div class="section-heading reveal"><p>06 / CONTACT</p><h2>Let's Connect</h2></div>
+      <div class="contact-card reveal">
+        <p>Want to connect, collaborate, or talk about a project?</p>
         <a class="email" href="mailto:Karanchakma931@gmail.com">Karanchakma931@gmail.com</a>
-        <p class="contact-note">Feel free to reach out for collaboration, projects or opportunities.</p>
-        <div class="socials">
-          <a href="https://www.facebook.com/share/1Hn7JzmnPX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.31 0-5 1.69-5 5v3H6v4h3v4h4v-4h3.2l.8-4H13V9c0-.67.33-1 1-1Z"/></svg>
-          </a>
-          <a href="https://github.com/karanchakma931-crypto" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7A11.3 11.3 0 0 0 8.43 22.9c.57.1.78-.25.78-.55v-2.1c-3.17.69-3.84-1.34-3.84-1.34-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.52-2.53-.29-5.2-1.27-5.2-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.13 1.17a10.9 10.9 0 0 1 5.7 0c2.17-1.48 3.13-1.17 3.13-1.17.62 1.58.23 2.74.11 3.03.73.8 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.52-2.53-.29-5.2-1.27-5.2-5.65 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.13 1.17a10.9 10.9 0 0 1 5.7 0c2.17-1.48 3.13-1.17 3.13-1.17.62 1.58.23 2.74.11 3.03.73.8 1.18 1.82 1.18 3.07 0 4.39-2.68 5.36-5.22 5.64.41.36.78 1.08.78 2.18v3.23c0 .3.21.66.79.55A11.3 11.3 0 0 0 12 .7Z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/karan-chakma-04ba553a7?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 3.4A2.2 2.2 0 1 1 5.2 7.8a2.2 2.2 0 0 1 0-4.4ZM3.4 9h3.6v11.6H3.4V9Zm5.8 0h3.45v1.58h.05c.48-.91 1.65-1.87 3.4-1.87 3.64 0 4.31 2.4 4.31 5.52v6.37h-3.6v-5.65c0-1.35-.02-3.08-1.88-3.08-1.88 0-2.17 1.47-2.17 2.98v5.75H9.2V9Z"/></svg>
-          </a>
+        <div class="socials large">
+          <a href="https://www.facebook.com/share/1Hn7JzmnPX/?mibextid=wwXIfr" target="_blank" rel="noopener">f</a>
+          <a href="https://github.com/karanchakma931-crypto" target="_blank" rel="noopener">⌘</a>
+          <a href="https://www.linkedin.com/in/karan-chakma-04ba553a7" target="_blank" rel="noopener">in</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Karan Chakma. All rights reserved.</p>
+    <p>© <span id="year"></span> Karan Chakma. Built with curiosity.</p>
   </footer>
   <script src="script.js"></script>
 </body>
