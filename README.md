@@ -1,18 +1,19 @@
-# Karan Chakma — Personal Portfolio
+# Karan Chakma — Premium Portfolio
 
 Live site: https://karanchakma931-crypto.github.io/Karan-chakma-portfolio/
 
 ## Files
-- `index.html` — content and sections
-- `style.css` — design and responsive layout
-- `script.js` — menu, animations and year
+- `index.html` — all portfolio content and sections
+- `style.css` — design, layout and responsive styling
+- `script.js` — menu, reveal animations and current year
 
-## How to update
-1. Open your GitHub repository.
-2. Open the file you want to change (`index.html`, `style.css`, or `script.js`).
-3. Click the pencil/edit icon.
-4. Make your changes.
+## Updating later
+For achievements, certificates, projects, skills or other text:
+1. Open `index.html` in the GitHub repository.
+2. Click the pencil/Edit button.
+3. Find the relevant section.
+4. Edit the text or duplicate an existing card/block.
 5. Click **Commit changes**.
-6. Wait a short time for GitHub Pages to rebuild. Refresh the live website.
+6. Wait a few minutes for GitHub Pages to redeploy, then refresh the site.
 
-For new projects/achievements, edit `index.html`. Keep the files in the repository root.
+For design/color/layout changes, edit `style.css`.
