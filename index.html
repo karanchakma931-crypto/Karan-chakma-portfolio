@@ -77,6 +77,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:62px}
 .proj:hover{border-color:var(--accent);transform:translateY(-3px)}
 .proj a.gh::after{content:"";position:absolute;inset:0;border-radius:16px}
 .src{color:var(--muted);font-size:.8rem}
+.soon{border:2px dashed var(--line);background:transparent}
 .cert{border-top:4px solid var(--accent)}
 .issuer{font-weight:700;color:var(--ink)!important}
 .role{font-size:.88rem;color:var(--accent);font-weight:700}
@@ -96,6 +97,9 @@ input,textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid 
 textarea{min-height:120px;resize:vertical}
 @media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
 footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
 #top{position:fixed;right:20px;bottom:20px;opacity:0;pointer-events:none;transition:opacity .2s;background:var(--accent);color:var(--accent-ink);border:none;width:44px;height:44px;border-radius:50%;font-size:1.2rem;cursor:pointer}
 #top.show{opacity:1;pointer-events:auto}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.typing::after{animation:none}.btn:hover{transform:none}}
@@ -146,7 +150,7 @@ footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid 
 
 <section id="skills"><div class="wrap">
   <h2>Skills</h2>
-  <div class="group"><h3>Technical</h3><div class="chips"><span class="chip">C Programming</span><span class="chip">HTML &amp; CSS</span><span class="chip">Programming Fundamentals</span><span class="chip">Basic Algorithms</span><span class="chip">Basic Data Structures</span><span class="chip">Debugging &amp; Error Solving</span></div></div>
+  <div class="group"><h3>Technical</h3><div class="chips"><span class="chip">C Programming</span><span class="chip">HTML &amp; CSS</span><span class="chip">Programming Fundamentals</span><span class="chip">Basic Algorithms</span><span class="chip">Basic Data Structures</span><span class="chip">Debugging &amp; Error Solving</span><span class="chip">Canva Design</span></div></div>
   <div class="group"><h3>Personal</h3><div class="chips"><span class="chip">Problem Solving</span><span class="chip">Teamwork &amp; Collaboration</span><span class="chip">Time Management</span><span class="chip">Communication</span></div></div>
   <div class="group"><h3>Currently exploring</h3><div class="chips"><span class="chip focus">Cyber Security</span><span class="chip focus">AI &amp; ML Foundations</span><span class="chip focus">Web Development</span></div></div>
 </div></section>
@@ -154,7 +158,7 @@ footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid 
 <section id="projects"><div class="wrap">
   <h2>Some things I've built</h2>
   <div class="grid">
-    <article class="card proj" style="max-width:520px">
+    <article class="card proj">
       <h3>Student Result Management System (SRMS)</h3>
       <p>A group project for managing student result information through a simple program.</p>
       <div class="actions"><a class="gh" href="https://github.com/karanchakma931-crypto/Karanchakma/blob/main/Students%20result%20management%20system.c" target="_blank" rel="noopener noreferrer" title="Open the project">
@@ -162,6 +166,12 @@ footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid 
       <small class="src">github.com/karanchakma931-crypto/Karanchakma</small>
       <div class="tags"><span class="tag">Team</span><span class="tag">C Programming</span></div>
     </article>
+    <article class="card soon">
+      <span class="role">Coming soon</span>
+      <h3>More projects on the way</h3>
+      <p>I'm working on new projects as I learn. This section will be updated whenever I build something new.</p>
+    </article>
+    <!-- TO ADD A NEW PROJECT: copy the SRMS <article> block above, paste it here, and change the title, text, tags and link. -->
   </div>
 </div></section>
 
@@ -169,19 +179,19 @@ footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid 
   <h2>Extracurricular activities</h2>
   <div class="grid">
     <article class="card club">
-      <span class="role">Member</span>
+      <span class="role">General Member</span>
       <h3>EWU Cyber Security Club</h3>
       <p>Learning about cyber security through the club's activities, events and community at East West University.</p>
       <div class="tags"><span class="tag">Cyber Security</span><span class="tag">East West University</span></div>
     </article>
     <article class="card club">
-      <span class="role">Member</span>
+      <span class="role">General Member</span>
       <h3>East West University Telecommunication Club</h3>
       <p>Part of the club's community, learning about telecommunication and technology through its programs and events.</p>
       <div class="tags"><span class="tag">Telecommunication</span><span class="tag">East West University</span></div>
     </article>
     <article class="card club">
-      <span class="role">Member</span>
+      <span class="role">General Member</span>
       <h3>EWU Computer Programming Club (EWUCoPC)</h3>
       <p>Learning programming and problem solving through the club's workshops, events and community at East West University.</p>
       <div class="tags"><span class="tag">Programming</span><span class="tag">East West University</span></div>
@@ -212,6 +222,11 @@ footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid 
       <p class="issuer">NGAIRC · IEEE CIS Bangladesh Chapter · EWUCoPC</p>
       <p>Organized by Next Generation AI Research Centre (NGAIRC), supported by IEEE Computational Intelligence Society (Bangladesh Chapter) and East West University Computer Programming Club (EWUCoPC).</p>
     </article>
+    <article class="card soon">
+      <span class="role">Coming soon</span>
+      <h3>More certificates on the way</h3>
+      <p>I'm always learning new things. This section will be updated as I complete more courses and events.</p>
+    </article>
     <!-- TO ADD A NEW CERTIFICATE: copy one <article> block above, paste it here, and change the text.
          Optional link: add <div class="actions"><a href="LINK" target="_blank" rel="noopener noreferrer">View certificate →</a></div> after the last <p>. -->
   </div>
@@ -228,10 +243,12 @@ footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid 
       <a href="https://www.facebook.com/share/1Hn7JzmnPX/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
     </div>
     <form id="form">
-      <input id="fn" placeholder="Your name" required aria-label="Your name">
-      <input id="fe" type="email" placeholder="Your email" required aria-label="Your email">
-      <textarea id="fm" placeholder="Your message" required aria-label="Your message"></textarea>
-      <button class="btn primary" type="submit">Send message</button>
+      <input id="fn" name="name" placeholder="Your name" required aria-label="Your name">
+      <input id="fe" name="email" type="email" placeholder="Your email" required aria-label="Your email">
+      <textarea id="fm" name="message" placeholder="Your message" required aria-label="Your message"></textarea>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+      <button class="btn primary" type="submit" id="send">Send message</button>
+      <p id="status" role="status" style="font-size:.92rem;min-height:1.4em"></p>
     </form>
   </div>
 </div></section>
@@ -265,10 +282,26 @@ addEventListener('scroll',()=>{
  navA.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
  topBtn.classList.toggle('show',scrollY>500)},{passive:true});
 topBtn.onclick=()=>scrollTo({top:0});
-// Contact form (opens the visitor's email app)
-document.getElementById('form').onsubmit=e=>{e.preventDefault();
- const n=fn.value,m=fm.value,em=fe.value;
- location.href='mailto:Karanchakma931@gmail.com?subject='+encodeURIComponent('Portfolio message from '+n)+'&body='+encodeURIComponent(m+'\n\nFrom: '+n+' ('+em+')')};
+// Scroll reveal
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+ document.documentElement.classList.add('js');
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+ document.querySelectorAll('main section:not(.hero) h2, .card, .chip, .group, .timeline > div, .stat, .info, form, .contact-links a').forEach((el,i)=>{el.classList.add('reveal');el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
+}
+// Contact form (Formspree). Paste your form ID below, e.g. 'xyzabcde'
+const FORMSPREE_ID='YOUR_FORM_ID';
+document.getElementById('form').onsubmit=async e=>{e.preventDefault();
+ const n=fn.value,m=fm.value,em=fe.value,st=document.getElementById('status'),btn=document.getElementById('send');
+ if(FORMSPREE_ID==='YOUR_FORM_ID'){ // fallback until the ID is added: open the visitor's email app
+  location.href='mailto:Karanchakma931@gmail.com?subject='+encodeURIComponent('Portfolio message from '+n)+'&body='+encodeURIComponent(m+'\n\nFrom: '+n+' ('+em+')');return}
+ btn.disabled=true;btn.textContent='Sending...';st.textContent='';
+ try{
+  const r=await fetch('https://formspree.io/f/'+FORMSPREE_ID,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(e.target)});
+  if(r.ok){st.style.color='var(--accent)';st.textContent='Thank you! Your message has been sent.';e.target.reset()}
+  else throw 0
+ }catch(err){st.style.color='#d33';st.textContent='Sorry, something went wrong. Please email me directly at Karanchakma931@gmail.com.'}
+ btn.disabled=false;btn.textContent='Send message';
+};
 </script>
 </body>
 </html>
