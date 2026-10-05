@@ -5,17 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karan Chakma | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 <header class="navbar">
   <a class="logo" href="#home">Karan <span>Chakma</span></a>
-  <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">☀️</button><button class="menu" id="menuBtn">☰</button></div>
+  <div class="nav-actions"><button class="menu" id="menuBtn">☰</button></div>
   <nav id="nav">
     <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
-    <a href="#projects">Projects</a><a href="#education">Education</a>
+    <a href="#projects">Projects</a><a href="#interests">Interests</a><a href="#education">Education</a>
     <a href="#certificates">Certificates</a><a href="#contact">Contact</a>
   </nav>
 </header>
+<button class="theme-toggle corner-theme" id="themeToggle" aria-label="Toggle dark and light mode">☀️</button>
 
 <main>
 <section id="home" class="hero">
@@ -29,7 +31,6 @@
   <div class="techs">
     <div class="tech"><b>HTML</b><small>HTML5</small></div>
     <div class="tech"><b>CSS</b><small>CSS3</small></div>
-    <div class="tech"><b>JS</b><small>JavaScript</small></div>
     <div class="tech"><b>C</b><small>C Programming</small></div>
   </div>
 </section>
@@ -47,8 +48,22 @@
   <p class="eyebrow">SKILLS</p>
   <h2>Skills</h2>
   <div class="cards skills">
-    <div>C Programming</div><div>HTML &amp; CSS</div><div>JavaScript</div>
-    <div>Problem Solving</div><div>Team Management</div><div>Time Management</div><div>Volunteering</div>
+    <div>C Programming</div><div>HTML &amp; CSS</div><div>Programming Fundamentals</div>
+    <div>Problem Solving</div><div>Basic Algorithms</div><div>Basic Data Structures</div>
+    <div>Debugging &amp; Error Solving</div><div>Teamwork &amp; Collaboration</div><div>Time Management</div><div>Communication</div>
+  </div>
+</section>
+
+
+<section id="interests" class="section">
+  <p class="eyebrow">INTERESTS</p>
+  <h2>Areas I'm Interested In</h2>
+  <div class="cards interest-cards">
+    <div><i class="fa-solid fa-shield-halved"></i><br>Cyber Security</div>
+    <div><i class="fa-solid fa-brain"></i><br>AI &amp; ML Foundations</div>
+    <div><i class="fa-solid fa-code"></i><br>Programming</div>
+    <div><i class="fa-solid fa-globe"></i><br>Web Development</div>
+    <div><i class="fa-solid fa-lightbulb"></i><br>Problem Solving</div>
   </div>
 </section>
 
@@ -56,8 +71,8 @@
   <p class="eyebrow">PROJECTS</p>
   <h2>Some Things I've Built</h2>
   <div class="project-grid">
-    <article class="project"><span class="number">01</span><h3>Jump Game</h3><p>A small game project built as a solo project to practice programming and logic.</p><span class="tag">C Programming</span></article>
-    <article class="project"><span class="number">02</span><h3>Student Result Management System</h3><p>A group project focused on managing student result information through a simple programming system.</p><span class="tag">C Programming</span></article>
+    <article class="project"><span class="number">01</span><h3>Jump Game</h3><p>A small game project built as a solo project to practice programming and logic.</p><div class="project-meta"><span class="project-type">Solo</span><span class="project-type">Practical</span><span class="project-type">Tool</span><span class="tag">C Programming</span></div></article>
+    <article class="project"><span class="number">02</span><h3>Student Result Management System</h3><p>A group project focused on managing student result information through a simple programming system.</p><div class="project-meta"><span class="project-type">Team</span><span class="project-type">Practical</span><span class="project-type">Tool</span><span class="tag">C Programming</span></div></article>
   </div>
 </section>
 
@@ -90,9 +105,9 @@
     <a class="contact-item" href="tel:+8801846991212"><span class="contact-icon">☎</span><span><b>Phone</b><small>+880 1846-991212</small></span></a>
   </div>
   <div class="social-links">
-    <a href="https://github.com/karanchakma931-crypto" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a>
-    <a href="https://www.linkedin.com/in/karan-chakma-04ba553a7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
-    <a href="https://www.facebook.com/share/1Hn7JzmnPX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+    <a href="https://github.com/karanchakma931-crypto" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/karan-chakma-04ba553a7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://www.facebook.com/share/1Hn7JzmnPX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
   </div>
 </section>
 </main>

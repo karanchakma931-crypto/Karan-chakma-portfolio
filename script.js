@@ -8,3 +8,14 @@ themeToggle.addEventListener('click',()=>{
   themeToggle.textContent=light?'🌙':'☀️';
   localStorage.setItem('theme',light?'light':'dark');
 });
+
+document.querySelectorAll('#nav a').forEach(link=>{
+  link.addEventListener('click',e=>{
+    const target=document.querySelector(link.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+      nav.classList.remove('open');
+    }
+  });
+});

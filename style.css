@@ -37,3 +37,14 @@ body.light .contact-item,body.light .social-links a{background:#fff;border-color
 body.light .contact-icon{background:#edf5fd}
 body.light .contact-item b{color:#172235}
 body.light .contact-item small{color:#526276}
+
+/* Enhanced project tags, interests and corner theme switch */
+.corner-theme{position:fixed;right:24px;bottom:24px;z-index:30;box-shadow:0 8px 25px rgba(0,0,0,.25)}
+.interest-cards div i{font-size:25px;color:#4da3ff;margin-bottom:8px}
+.project-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.project-type,.tag{display:inline-flex;align-items:center;border:1px solid #315170;border-radius:20px;padding:5px 12px;color:#73b8ff;font-size:12px;background:#0a1727}
+.project-meta .tag{margin-left:2px}
+.project-type{color:#c5d7ea}
+section[id]{scroll-margin-top:85px}
+@media(max-width:800px){.corner-theme{right:18px;bottom:18px}}
+body.light .project-type,body.light .tag{background:#f4f8fc;border-color:#cbd8e6;color:#315b82}
