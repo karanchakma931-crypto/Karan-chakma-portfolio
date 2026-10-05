@@ -1,113 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karan Chakma | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karan Chakma | Portfolio</title>
+<meta name="description" content="Karan Chakma, CSE student at East West University, interested in cyber security, AI/ML and web development.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232F5BFF'/><text x='50' y='67' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>KC</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F6FA;--surface:#fff;--ink:#0F1B2D;--muted:#55627a;--line:#dde3ee;--accent:#2F5BFF;--accent-ink:#fff;--soft:#e8eeff}
+:root[data-theme="dark"]{--bg:#0D1422;--surface:#141d30;--ink:#e8edf7;--muted:#9aa7bf;--line:#243049;--accent:#6c8cff;--accent-ink:#0D1422;--soft:#1b2745}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:76px 0}
+h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:28px}
+.lead{color:var(--muted);max-width:60ch}
+/* nav */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.2rem}
+.links{display:flex;gap:4px;align-items:center}
+.links a{padding:6px 11px;border-radius:8px;font-size:.92rem;color:var(--muted)}
+.links a:hover,.links a.active{color:var(--accent);background:var(--soft)}
+.icon-btn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;width:38px;height:38px;cursor:pointer;font-size:1rem}
+#menu{display:none}
+@media(max-width:860px){#menu{display:block}.links{display:none;position:absolute;top:62px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);padding:12px 22px;border-bottom:1px solid var(--line)}.links.open{display:flex}}
+/* hero */
+.hero{padding:84px 0 70px}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:800;margin-bottom:14px}
+.typing{font-family:'Bricolage Grotesque';font-size:clamp(1.15rem,2.6vw,1.5rem);color:var(--accent);min-height:1.8em;margin-bottom:16px}
+.typing::after{content:"";display:inline-block;width:2px;height:1.1em;background:var(--accent);margin-left:3px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:700;border:2px solid var(--accent);cursor:pointer;font:inherit;font-weight:700}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent);background:transparent}
+.btn:hover{transform:translateY(-2px)}
+.photo{width:min(300px,100%);aspect-ratio:1;border-radius:50%;margin:0 auto;background:var(--soft);border:6px solid var(--surface);box-shadow:0 0 0 2px var(--accent);display:grid;place-items:center;overflow:hidden;font-family:'Bricolage Grotesque';font-size:4.5rem;font-weight:800;color:var(--accent)}
+.photo img{width:100%;height:100%;object-fit:cover}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero .btns{justify-content:center}.photo{order:-1;width:200px}.lead{margin:auto}}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center}
+.stat b{display:block;font-family:'Bricolage Grotesque';font-size:2rem;color:var(--accent)}
+.stat span{color:var(--muted);font-size:.9rem}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+/* about */
+.about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:34px}
+.info{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;gap:14px}
+.info small{color:var(--muted);display:block}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr}}
+/* chips */
+.group{margin-bottom:22px}
+.group h3{font-size:1.05rem;margin-bottom:10px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:8px 16px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-weight:500}
+.chip.focus{background:var(--soft);border-color:var(--accent);color:var(--accent)}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.card p{color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.tag{font-size:.8rem;padding:3px 10px;border-radius:6px;background:var(--soft);color:var(--accent);font-weight:500}
+.card .actions{display:flex;gap:14px;font-weight:700;color:var(--accent);font-size:.92rem}
+.card .actions a:hover{text-decoration:underline}
+.role{font-size:.88rem;color:var(--accent);font-weight:700}
+.club{border-left:5px solid var(--accent)}
+/* timeline */
+.timeline{border-left:2px solid var(--line);padding-left:26px;display:grid;gap:26px}
+.timeline div{position:relative}
+.timeline div::before{content:"";position:absolute;left:-34px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.timeline p{color:var(--muted)}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:30px}
+.contact-links{display:grid;gap:12px;align-content:start}
+.contact-links a{display:flex;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-weight:500}
+.contact-links a:hover{border-color:var(--accent);color:var(--accent)}
+form{display:grid;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+input,textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+textarea{min-height:120px;resize:vertical}
+@media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
+footer{padding:30px 0;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+#top{position:fixed;right:20px;bottom:20px;opacity:0;pointer-events:none;transition:opacity .2s;background:var(--accent);color:var(--accent-ink);border:none;width:44px;height:44px;border-radius:50%;font-size:1.2rem;cursor:pointer}
+#top.show{opacity:1;pointer-events:auto}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.typing::after{animation:none}.btn:hover{transform:none}}
+</style>
 </head>
 <body>
-<header class="navbar">
-  <a class="logo" href="#home">Karan <span>Chakma</span></a>
-  <div class="nav-actions"><button class="menu" id="menuBtn">☰</button></div>
-  <nav id="nav">
-    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
-    <a href="#projects">Projects</a><a href="#interests">Interests</a><a href="#education">Education</a>
-    <a href="#certificates">Certificates</a><a href="#contact">Contact</a>
-  </nav>
-</header>
-<button class="theme-toggle corner-theme" id="themeToggle" aria-label="Toggle dark and light mode">☀️</button>
+<header><div class="wrap"><nav>
+  <a href="#home" class="logo">Karan Chakma</a>
+  <div class="links" id="links">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#activities">Activities</a><a href="#education">Education</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a>
+    <button class="icon-btn" id="theme" aria-label="Toggle dark mode">☀️</button>
+  </div>
+  <button class="icon-btn" id="menu" aria-label="Open menu">☰</button>
+</nav></div></header>
 
 <main>
-<section id="home" class="hero">
-  <div class="hero-text">
-    <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
-    <h1>Hi, I'm <span>Karan Chakma</span></h1>
-    <h2>CSE Student &amp; Aspiring Software Engineer</h2>
+<section class="hero" id="home"><div class="wrap hero-grid">
+  <div>
+    <h1>Hi, I'm Karan Chakma</h1>
+    <div class="typing" id="typing" aria-label="CSE Student and Aspiring Software Engineer"></div>
     <p class="lead">I'm a CSE student at East West University. I enjoy learning programming, building small projects and improving my skills step by step.</p>
-    <a class="btn" href="#contact">Get in Touch</a>
+    <div class="btns">
+      <a class="btn primary" href="#contact">Get in Touch</a>
+      <a class="btn ghost" href="#projects">View Projects</a>
+      <a class="btn ghost" href="Karan-Chakma-CV.pdf" download>Download CV</a>
+    </div>
   </div>
-</section>
+  <!-- Photo: replace the KC text with <img src="photo.jpg" alt="Karan Chakma"> -->
+  <div class="photo" aria-label="Profile photo">KC</div>
+</div></section>
 
-<section id="about" class="section">
-  <p class="eyebrow">ABOUT ME</p>
-  <h2>A little about me</h2>
-  <div class="about-grid">
-    <p>I'm Karan Chakma, a Computer Science and Engineering student at East West University. I'm interested in technology, problem solving and creating useful things through code. I like working on small projects and learning new things along the way.</p>
-    <div class="info"><p><b>Location</b><br>Dhaka, Bangladesh</p><p><b>Phone</b><br>+880 1846-991212</p><p><b>Email</b><br><a href="mailto:Karanchakma931@gmail.com">Karanchakma931@gmail.com</a></p></div>
+<div class="wrap"><div class="stats">
+  <div class="stat"><b>2</b><span>Projects built</span></div>
+  <div class="stat"><b>3</b><span>Clubs joined</span></div>
+  <div class="stat"><b>1</b><span>Certificate</span></div>
+  <div class="stat"><b>2nd</b><span>Semester at EWU</span></div>
+</div></div>
+
+<section id="about"><div class="wrap about-grid">
+  <div>
+    <h2>A little about me</h2>
+    <p class="lead">I'm interested in technology, problem solving and creating useful things through code. I like working on small projects and learning new things along the way. Right now I'm exploring cyber security, AI and ML foundations, and web development.</p>
   </div>
-</section>
+  <div class="info">
+    <div><small>Location</small>Dhaka, Bangladesh</div>
+    <div><small>Phone</small>+880 1846-991212</div>
+    <div><small>Email</small>Karanchakma931@gmail.com</div>
+  </div>
+</div></section>
 
-<section id="skills" class="section alt">
-  <p class="eyebrow">SKILLS</p>
+<section id="skills"><div class="wrap">
   <h2>Skills</h2>
-  <div class="cards skills">
-    <div>C Programming</div><div>HTML &amp; CSS</div><div>Programming Fundamentals</div>
-    <div>Problem Solving</div><div>Basic Algorithms</div><div>Basic Data Structures</div>
-    <div>Debugging &amp; Error Solving</div><div>Teamwork &amp; Collaboration</div><div>Time Management</div><div>Communication</div>
+  <div class="group"><h3>Technical</h3><div class="chips"><span class="chip">C Programming</span><span class="chip">HTML &amp; CSS</span><span class="chip">Programming Fundamentals</span><span class="chip">Basic Algorithms</span><span class="chip">Basic Data Structures</span><span class="chip">Debugging &amp; Error Solving</span></div></div>
+  <div class="group"><h3>Personal</h3><div class="chips"><span class="chip">Problem Solving</span><span class="chip">Teamwork &amp; Collaboration</span><span class="chip">Time Management</span><span class="chip">Communication</span></div></div>
+  <div class="group"><h3>Currently exploring</h3><div class="chips"><span class="chip focus">Cyber Security</span><span class="chip focus">AI &amp; ML Foundations</span><span class="chip focus">Web Development</span></div></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Some things I've built</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>Jump Game</h3>
+      <p>A small game built as a solo project to practice programming and logic.</p>
+      <div class="actions"><a href="https://github.com/karanchakma931-crypto" target="_blank" rel="noopener">View code</a></div>
+      <div class="tags"><span class="tag">Solo</span><span class="tag">C Programming</span></div>
+    </article>
+    <article class="card">
+      <h3>Student Result Management System</h3>
+      <p>A group project for managing student result information through a simple program.</p>
+      <div class="actions"><a href="https://github.com/karanchakma931-crypto" target="_blank" rel="noopener">View code</a></div>
+      <div class="tags"><span class="tag">Team</span><span class="tag">C Programming</span></div>
+    </article>
   </div>
-</section>
+</div></section>
 
-
-<section id="interests" class="section">
-  <p class="eyebrow">INTERESTS</p>
-  <h2>Areas I'm Interested In</h2>
-  <div class="cards interest-cards">
-    <div><i class="fa-solid fa-shield-halved"></i><br>Cyber Security</div>
-    <div><i class="fa-solid fa-brain"></i><br>AI &amp; ML Foundations</div>
-    <div><i class="fa-solid fa-code"></i><br>Programming</div>
-    <div><i class="fa-solid fa-globe"></i><br>Web Development</div>
-    <div><i class="fa-solid fa-lightbulb"></i><br>Problem Solving</div>
+<section id="activities"><div class="wrap">
+  <h2>Extracurricular activities</h2>
+  <div class="grid">
+    <article class="card club">
+      <span class="role">Member</span>
+      <h3>EWU Cyber Security Club</h3>
+      <p>Learning about cyber security through the club's activities, events and community at East West University.</p>
+      <div class="tags"><span class="tag">Cyber Security</span><span class="tag">East West University</span></div>
+    </article>
+    <article class="card club">
+      <span class="role">Member</span>
+      <h3>East West University Telecommunication Club</h3>
+      <p>Part of the club's community, learning about telecommunication and technology through its programs and events.</p>
+      <div class="tags"><span class="tag">Telecommunication</span><span class="tag">East West University</span></div>
+    </article>
+    <article class="card club">
+      <span class="role">Member</span>
+      <h3>EWU Computer Programming Club (EWUCoPC)</h3>
+      <p>Learning programming and problem solving through the club's workshops, events and community at East West University.</p>
+      <div class="tags"><span class="tag">Programming</span><span class="tag">East West University</span></div>
+    </article>
   </div>
-</section>
+</div></section>
 
-<section id="projects" class="section">
-  <p class="eyebrow">PROJECTS</p>
-  <h2>Some Things I've Built</h2>
-  <div class="project-grid">
-    <article class="project"><span class="number">01</span><h3>Jump Game</h3><p>A small game project built as a solo project to practice programming and logic.</p><div class="project-meta"><span class="project-type">Solo</span><span class="project-type">Practical</span><span class="project-type">Tool</span><span class="tag">C Programming</span></div></article>
-    <article class="project"><span class="number">02</span><h3>Student Result Management System</h3><p>A group project focused on managing student result information through a simple programming system.</p><div class="project-meta"><span class="project-type">Team</span><span class="project-type">Practical</span><span class="project-type">Tool</span><span class="tag">C Programming</span></div></article>
-  </div>
-</section>
-
-<section id="education" class="section alt">
-  <p class="eyebrow">EDUCATION</p>
-  <h2>My Academic Journey</h2>
+<section id="education"><div class="wrap">
+  <h2>My academic journey</h2>
   <div class="timeline">
-    <div><h3>BSc in Computer Science &amp; Engineering</h3><p>East West University (EWU) · 2nd Semester</p></div>
+    <div><h3>BSc in Computer Science &amp; Engineering</h3><p>East West University (EWU), currently in 2nd semester</p></div>
     <div><h3>Higher Secondary Certificate (HSC)</h3><p>Ideal College, Dhanmondi</p></div>
   </div>
-</section>
+</div></section>
 
-<section id="certificates" class="section">
-  <p class="eyebrow">CERTIFICATE</p>
-  <h2>Certificate &amp; Achievement</h2>
-  <article class="certificate">
-    <div class="certificate-icon" aria-hidden="true">▤</div>
-    <h3>“We Stand Against Cyberbullying”</h3>
-    <p>Certificate of Attendance</p>
+<section id="certificates"><div class="wrap">
+  <h2>Certificate &amp; achievement</h2>
+  <article class="card">
+    <h3>"We Stand Against Cyberbullying"</h3>
+    <span class="role">Certificate of Attendance</span>
     <p>Organized by Next Generation AI Research Centre (NGAIRC), supported by IEEE Computational Intelligence Society (Bangladesh Chapter) and East West University Computer Programming Club (EWUCoPC).</p>
   </article>
-</section>
+</div></section>
 
-<section id="contact" class="section alt">
-  <p class="eyebrow">CONTACT</p>
-  <h2>Let's Connect</h2>
-  <p class="contact-intro">Feel free to reach out to me if you need anything or just want to say hi.</p>
-  <div class="contact-info-row">
-    <a class="contact-item" href="mailto:Karanchakma931@gmail.com"><span class="contact-icon">✉</span><span><b>Email</b><small>Karanchakma931@gmail.com</small></span></a>
-    <a class="contact-item" href="tel:+8801846991212"><span class="contact-icon">☎</span><span><b>Phone</b><small>+880 1846-991212</small></span></a>
+<section id="contact"><div class="wrap">
+  <h2>Let's connect</h2>
+  <div class="contact-grid">
+    <div class="contact-links">
+      <a href="mailto:Karanchakma931@gmail.com">✉ Karanchakma931@gmail.com</a>
+      <a href="tel:+8801846991212">☎ +880 1846-991212</a>
+      <a href="https://github.com/karanchakma931-crypto" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/karan-chakma-04ba553a7/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.facebook.com/share/1Hn7JzmnPX/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <form id="form">
+      <input id="fn" placeholder="Your name" required aria-label="Your name">
+      <input id="fe" type="email" placeholder="Your email" required aria-label="Your email">
+      <textarea id="fm" placeholder="Your message" required aria-label="Your message"></textarea>
+      <button class="btn primary" type="submit">Send message</button>
+    </form>
   </div>
-  <div class="social-links">
-    <a href="https://github.com/karanchakma931-crypto" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/karan-chakma-04ba553a7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-    <a href="https://www.facebook.com/share/1Hn7JzmnPX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-  </div>
-</section>
+</div></section>
 </main>
 
 <footer>© 2026 Karan Chakma · Personal Portfolio</footer>
-<script src="script.js"></script>
+<button id="top" aria-label="Back to top">↑</button>
+
+<script>
+// Theme
+const root=document.documentElement,tb=document.getElementById('theme');
+function setTheme(t){root.dataset.theme=t;tb.textContent=t==='dark'?'🌙':'☀️'}
+let saved=null;try{saved=localStorage.getItem('theme')}catch(e){}
+setTheme(saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+tb.onclick=()=>{const t=root.dataset.theme==='dark'?'light':'dark';setTheme(t);try{localStorage.setItem('theme',t)}catch(e){}};
+// Mobile menu
+const links=document.getElementById('links');
+document.getElementById('menu').onclick=()=>links.classList.toggle('open');
+links.addEventListener('click',e=>{if(e.target.tagName==='A')links.classList.remove('open')});
+// Typing
+const words=['CSE Student','Aspiring Software Engineer','Cyber Security Learner','Web Developer'];
+const el=document.getElementById('typing');
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=words[1]}
+else{let w=0,c=0,del=false;(function tick(){const word=words[w];c+=del?-1:1;el.textContent=word.slice(0,c);
+ let d=del?40:85;if(!del&&c===word.length){del=true;d=1400}else if(del&&c===0){del=false;w=(w+1)%words.length;d=300}setTimeout(tick,d)})()}
+// Active nav + back to top
+const secs=[...document.querySelectorAll('main section[id]')],navA=[...links.querySelectorAll('a')];
+const topBtn=document.getElementById('top');
+addEventListener('scroll',()=>{
+ let cur='';secs.forEach(s=>{if(scrollY>=s.offsetTop-120)cur=s.id});
+ navA.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+ topBtn.classList.toggle('show',scrollY>500)},{passive:true});
+topBtn.onclick=()=>scrollTo({top:0});
+// Contact form (opens the visitor's email app)
+document.getElementById('form').onsubmit=e=>{e.preventDefault();
+ const n=fn.value,m=fm.value,em=fe.value;
+ location.href='mailto:Karanchakma931@gmail.com?subject='+encodeURIComponent('Portfolio message from '+n)+'&body='+encodeURIComponent(m+'\n\nFrom: '+n+' ('+em+')')};
+</script>
 </body>
 </html>
